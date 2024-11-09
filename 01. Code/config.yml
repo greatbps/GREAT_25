@@ -1,0 +1,19 @@
+#koreainvestment developer info
+#홈페이지에서 API서비스 신청시 받은 Appkey, Appsecret 값 설정
+api_key: "PSb6tRnToOep8OASOkZ9hfK5NHEiW3GQTMbk"
+api_secret_key: "HRpEQmVTUjX/cQki0XcyYrLngE6pTZJfYz+rXshlYP1+/CpV9tVi3bU6Rxz8pC0LLSaKehCqwB67UKnPAl9icWDUCGw8WO5Bb+CJODPcIZ9jo/1T9Km/Wq8Ri9RErkIbprWVCS5Zh0Vjbbv9Qt65A124rSB/rDb3mI0KxPB3qQHIgmzKbKg="
+htsid: "greatbps"
+custtype: "P"
+is_paper_trading: False
+
+
+#User Agent
+my_agent: "'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_9_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/35.0.1916.47 Safari/537.36"
+
+#domain info
+#실전투자
+url: "https://openapi.koreainvestment.com:9443" 
+#웹소켓
+websocket_url: "ws://ops.koreainvestment.com:21000" 
+#모의투자서비스
+#vts: "https://openapivts.koreainvestment.com:29443" 
