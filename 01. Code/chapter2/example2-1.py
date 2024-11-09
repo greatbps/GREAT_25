@@ -1,9 +1,9 @@
 import yaml
 
-from utils import KoreaInvestEnv, KoreaInvestAPI
+from chapter2.utils import KoreaInvestEnv, KoreaInvestAPI
 
 def main():
-    with open("/config.yml", encoding='utf-8') as f:
+    with open("./config.yml", encoding='utf-8') as f:
         cfg = yaml.load(f, Loader=yaml.FullLoader)
     
     env_cls = KoreaInvestEnv(cfg)
