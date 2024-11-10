@@ -1,0 +1,10 @@
+---
+id: fb628cf3-e30c-45f8-8fca-66d22b9414a3
+---
+
+# 내 데이터를 부탁해! (Llama 라마 3.1 with my data)
+#Omnivore
+
+[Read on Omnivore](https://omnivore.app/me/https-youtube-com-watch-v-6-ba-83-q-0-lr-bc-191244a5fd1)
+[Read Original](https://youtube.com/watch?v=6Ba83Q0LrBc)
+
