@@ -135,7 +135,7 @@ def main():
         "APP_KEY": "PSb6tRnToOep8OASOkZ9hfK5NHEiW3GQTMbk",  # 발급받은 APP KEY 입력
         "APP_SECRET": "HRpEQmVTUjX/cQki0XcyYrLngE6pTZJfYz+rXshlYP1+/CpV9tVi3bU6Rxz8pC0LLSaKehCqwB67UKnPAl9icWDUCGw8WO5Bb+CJODPcIZ9jo/1T9Km/Wq8Ri9RErkIbprWVCS5Zh0Vjbbv9Qt65A124rSB/rDb3mI0KxPB3qQHIgmzKbKg=",  # 발급받은 APP SECRET 입력
         "ACCOUNT_NUMBER": "64556264",
-        "WATCH_LIST": ["005930"]  # 관심종목 리스트
+        "WATCH_LIST": [stno]  # 관심종목 리스트
     }
     
     try:
@@ -162,4 +162,5 @@ def main():
         raise
 
 if __name__ == "__main__":
+    stno = "005930"
     main()
