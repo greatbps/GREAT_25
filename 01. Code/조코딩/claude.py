@@ -57,7 +57,7 @@ class KoreaInvestmentAPI:
             self.logger.error(f"Failed to get access token: {str(e)}")
             raise
 
-    def get_minute_chart(self, stock_code: str, minutes: int = 1, count: int = 100) -> pd.DataFrame:
+    def get_minute_chart(self, stock_code: str, minutes: int = 1, count: int = 30) -> pd.DataFrame:
         """
         1분봉 데이터 조회
         
@@ -74,7 +74,7 @@ class KoreaInvestmentAPI:
                 self.get_access_token()
 
             headers = {
-                "Content-Type": "application/json",
+                "Content-Type": "application/json; charset=utf-8",
                 "authorization": f"Bearer {self.access_token}",
                 "appKey": self.app_key,
                 "appSecret": self.app_secret,
@@ -135,7 +135,7 @@ def main():
         "APP_KEY": "PSb6tRnToOep8OASOkZ9hfK5NHEiW3GQTMbk",  # 발급받은 APP KEY 입력
         "APP_SECRET": "HRpEQmVTUjX/cQki0XcyYrLngE6pTZJfYz+rXshlYP1+/CpV9tVi3bU6Rxz8pC0LLSaKehCqwB67UKnPAl9icWDUCGw8WO5Bb+CJODPcIZ9jo/1T9Km/Wq8Ri9RErkIbprWVCS5Zh0Vjbbv9Qt65A124rSB/rDb3mI0KxPB3qQHIgmzKbKg=",  # 발급받은 APP SECRET 입력
         "ACCOUNT_NUMBER": "64556264",
-        "WATCH_LIST": ["005930", "035720", "000660", "069500"]  # 관심종목 리스트
+        "WATCH_LIST": ["005930"]  # 관심종목 리스트
     }
     
     try:
@@ -151,7 +151,7 @@ def main():
             df = client.get_minute_chart(stock_code, minutes=1, count=100)
             if df is not None:
                 print(f"\n종목코드: {stock_code} 1분봉 데이터")
-                print(df.head())  # 최근 5개 데이터 출력
+                print(df)  # 최근 5개 데이터 출력
                 
             time.sleep(1)  # API 호출 간격 조절
             
