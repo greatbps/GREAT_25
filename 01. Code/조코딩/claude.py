@@ -149,9 +149,10 @@ def main():
         # 각 종목의 1분봉 데이터 조회
         for stock_code in CONFIG["WATCH_LIST"]:
             df = client.get_minute_chart(stock_code, minutes=1, count=100)
+            # 1분 간격으로 30개만 조회 가능, 전일 데이터 조회 불가
             if df is not None:
                 print(f"\n종목코드: {stock_code} 1분봉 데이터")
-                print(df)  # 최근 5개 데이터 출력
+                print(df)  # 최근 30개 데이터 출력
                 
             time.sleep(1)  # API 호출 간격 조절
             
