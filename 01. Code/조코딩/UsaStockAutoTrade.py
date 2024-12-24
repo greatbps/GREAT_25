@@ -1,3 +1,4 @@
+#한국투자증권  API로 자동매매하는 코드
 import requests
 import json
 import datetime
@@ -5,7 +6,8 @@ from pytz import timezone
 import time
 import yaml
 
-with open('config.yaml', encoding='UTF-8') as f:
+path = r'C:\greatbps\GREAT_25\01. Code\조코딩\config.yaml'
+with open(path, encoding='UTF-8') as f:
     _cfg = yaml.load(f, Loader=yaml.FullLoader)
 APP_KEY = _cfg['APP_KEY']
 APP_SECRET = _cfg['APP_SECRET']
@@ -19,7 +21,7 @@ def send_message(msg):
     """디스코드 메세지 전송"""
     now = datetime.datetime.now()
     message = {"content": f"[{now.strftime('%Y-%m-%d %H:%M:%S')}] {str(msg)}"}
-    requests.post(DISCORD_WEBHOOK_URL, data=message)
+    # requests.post(DISCORD_WEBHOOK_URL, data=message)
     print(message)
 
 def get_access_token():
