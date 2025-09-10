@@ -10,7 +10,6 @@ tags: [daily_note]
 [[<% tp.date.yesterday("YYYY-MM-DD") %> | < yesterday]] | [[<% tp.date.tomorrow("YYYY-MM-DD") %> | tomorrow >]]
 
 ---
-
 #### 메모
 -  
 
