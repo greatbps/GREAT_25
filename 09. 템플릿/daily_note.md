@@ -6,7 +6,6 @@ tags: [daily_note]
 
 ### <% tp.date.now("MM-DD") %>
 - [ ] #todo 
-- [ ] #todo 
 
 [[<% tp.date.yesterday("YYYY-MM-DD") %> | < yesterday]] | [[<% tp.date.tomorrow("YYYY-MM-DD") %> | tomorrow >]]
 
